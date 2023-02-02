@@ -19,7 +19,7 @@
     const element = React.createElement(
       'div',
       {className: 'container'},
-      'Hello World',
+      ['Hello', 'World'].map(value => React.createElement('span', null, value)),
     )
 
     ReactDOM.createRoot(domNode).render(element) // Same as ReactDom.render(element, domNode)
